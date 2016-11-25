@@ -15,6 +15,13 @@ if [ -f ~/.zsh/.option_init ]; then
         . ~/.zsh/.option_init
 fi
 
+#######################################
+#基本コマンドのpath
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+#言語の設定
+LANG="en_US.UTF-8"
+
 
 
 ########################################
