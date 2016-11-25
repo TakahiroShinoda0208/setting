@@ -1,0 +1,8 @@
+#pathを通す時はここに記述　
+
+export PATH=$PATH:~/.composer/vendor/bin/
+
+export PATH=$PATH:~/Tools
+
+#gnuplotでpngファイル出力時に出たエラーのため環境変数追加
+#export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig

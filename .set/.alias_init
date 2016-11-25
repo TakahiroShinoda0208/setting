@@ -1,0 +1,24 @@
+# エイリアス
+
+alias la='ls -ah'
+alias ll='ls -lh'
+alias lal='ls -alh'
+#alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias tac='tail -r'
+alias mkdir='mkdir -p'
+alias g++='g++ -O3 -std=c++11'
+#alias rm ='mv -f -v ~/.Trash'
+
+alias e='emacs'
+
+alias htd="cd /Applications/MAMP/htdocs/"
+
+alias php="/usr/bin/php"
+
+alias sed="gsed"
+
+alias G='gnuplot'
+
+alias was='cd `cat ~/.now`'
