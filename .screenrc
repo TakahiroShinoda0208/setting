@@ -4,6 +4,7 @@ escape ^z^z
 #zshの使用
 shell zsh
 
+
 # General
 startup_message off
 vbell off
@@ -19,13 +20,13 @@ hardstatus alwayslastline "%{.Wb} . %-w%{.RW}%n %t%{-}%+w . %=%{= .y}(%l) %{.Wb}
 defbce on
 term xterm-256color
 termcapinfo xterm* 'Co#256:pa#32767:AB=\E[48;5;%dm:AF=\E[38;5;%dm:'
-#termcapinfo kterm* 'Co#256:pa#32767:AB=\E[48;5;%dm:AF=\E[38;5;%dm:'
+termcapinfo kterm* 'Co#256:pa#32767:AB=\E[48;5;%dm:AF=\E[38;5;%dm:'
 
 # Resize Window
 termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 termcapinfo kterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 
-# Binding 
+# Binding
 # bind x remove
 # bind j eval 'focus down'
 # bind k eval 'focus up'

@@ -18,8 +18,7 @@ alias G='gnuplot'
 
 
 alias e='emacs'
-#alias g++='g++ -std=c++0x -O3'
-alias g++='g++ -O3'
+alias g++='g++ -std=c++0x -O3'
 
 
 alias now='/home/people/stud013/tools/now'

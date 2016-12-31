@@ -19,7 +19,10 @@ fi
 
 ########################################
 # 環境変数
-#export LANG=ja_JP.UTF-8
+export LANG=ja_JP.UTF-8
+
+# screenで残っているものがないか表示する
+screen -ls
 
 # emacs 風キーバインドにする
 bindkey -e
@@ -45,14 +48,14 @@ SAVEHIST=1000000
 # プロンプト
 # 1行表示
 # PROMPT="%~ %# "
-#PROMPT="[%n%m](%*%) %~ %% "
+# PROMPT="[%n%m](%*%) %~ %% "
 
 # 2行表示
 #PROMPT="%{${fg[white]}%}[%n@%m]%{${reset_color}%} %~
 #%# "
-PROMPT="%{${fg[white]}%}[%*%  %n@%m]%{${reset_color}%} %~
+prompt="%{${fg[white]}%}[%*%  %n@%m]%{${reset_color}%} %~
 %# "
-
+tmp_rprompt="%{${fg[white]}%}[%~]%{${reset_color}%}"
 
 
 
@@ -110,9 +113,22 @@ case ${OSTYPE} in
     darwin*)
         #Mac用の設定
         #export CLICOLOR=1
-	alias ls='gls --color'	
+	alias ls='gls --color'
         ;;
     linux*)
         #Linux用の設定
-           ;;
+        #alias ls='ls -F --color=auto'
+       ;;
 esac
+
+########################################
+
+#pyenv settings
+export PYENV_ROOT="${HOME}/local/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+   export PATH=${PYENV_ROOT}/bin:$PATH
+   eval "$(pyenv init -)"
+fi
+
+#set PYTHON mirror
+export PYTHON_BUILD_MIRROR_URL="http://yyuu.github.io/pythons"

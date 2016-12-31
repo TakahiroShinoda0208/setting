@@ -18,7 +18,7 @@ export BOOST_ROOT=/usr/lib64/boost
 export PATH=$PATH:/home/people/stud013/tools/emacs-24.2/src
 export PATH=$PATH:/tools/bin
 export PATH=$PATH:~/tools/seqtk
-export PATH=$PATH:~/tools/xsel-1.2.0/
+export PATH=$PATH:~/tools/xsel-1.2.0/xsel
 
 
 #自作toolにPATHを通す
