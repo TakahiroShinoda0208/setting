@@ -176,19 +176,35 @@ Ex strpos( "ARNDCQEGHILKMFPSTWYV", "N" ) = 2
 */
 
 	for ( i=0; i<l1; i++ ) {
-              
-              int h1;
-              h1 = strpos(alphabet, fsa1->seq[i]);
-              
-              for ( j=0; j<l2; j++ ) {
+
+              if(strpos(alphabet, fsa1->seq[i]) != -1) //means not found
+              {
+                    int h1;
+                    h1 = strpos(alphabet, fsa1->seq[i]);
                     
-                    int h2;
-                    h2 = strpos(alphabet, fsa1->seq[j]);
-                    m[i][j] = blmat[h1][h2];
-                    
+                    for ( j=0; j<l2; j++ ) {
+               
+                          if(strpos(alphabet, fsa2->seq[j]) != -1) //means not found
+                          {      
+                                int h2;
+                                h2 = strpos(alphabet, fsa2->seq[j]);
+                                m[i][j] = blmat[h1][h2];
+                          }
+                          
+                          else
+                          {
+                                printf("Unclear character used in fasta file %s\n" ,argv[2]);
+                          }
+                    }
+              }
+              else
+              {
+                    printf("Unclear character used in fasta file %s\n" ,argv[1]);
+                    exit(1);
               }
               
  	}
+
 
 /* Here your coding ends */
 
